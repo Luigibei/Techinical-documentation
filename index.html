@@ -1,44 +1,119 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Registration Form</title>
-	  <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <h1>Registration Form</h1>
-    <p>Please fill out this form with the required information</p>
-    <form action='https://register-demo.freecodecamp.org'>
-      <fieldset>
-        <label>Enter Your First Name: <input type="text" name="first-name" required /></label>
-        <label>Enter Your Last Name: <input type="text" name="last-name" required /></label>
-        <label>Enter Your Email: <input type="email" name="email" required /></label>
-        <label>Create a New Password: <input type="password" name="password" pattern="[a-z0-5]{8,}" required /></label>
-      </fieldset>
-      <fieldset>
-        <label><input type="radio" name="account-type" class="inline" /> Personal Account</label>
-        <label><input type="radio" name="account-type" class="inline" /> Business Account</label>
-        <label>
-          <input type="checkbox" name="terms" class="inline" required /> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a>
-			  </label>
-      </fieldset>
-      <fieldset>
-        <label>Upload a profile picture: <input type="file" name="file" /></label>
-        <label>Input your age (years): <input type="number" name="age" min="13" max="120" />
-			  </label>
-        <label>How did you hear about us?
-          <select name="referrer">
-            <option value="">(select one)</option>
-            <option value="1">News</option>
-            <option value="2">YouTube Channel</option>
-            <option value="3">Forum</option>
-            <option value="4">Other</option>
-          </select>
-        </label>
-        <label>Provide a bio:
-          <textarea name="bio" rows="3" cols="30" placeholder="I like coding on the beach..."></textarea>
-			  </label>
-      </fieldset>
-      <input type="submit" value="Submit" />
-    </form>
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav id="navbar">
+        <header class="navbar-header">
+         <h1>HTML Documentation</h1>
+        </header>
+        <div class="nav-links">
+            <a href="#Introduction" class="link">Introduction</a>
+            <a href="#Tags" class="link">Tags</a>
+            <a href="#Forms" class="link">Forms</a>
+            <a href="#Buttons" class="link">Buttons</a>
+            <a href="#Dom" class="link">The DOM</a>
+        </div>
+    </nav>
+
+
+    <div class="main-doc"> 
+        <div class="main-section" id="Introduction">
+            <h1>Introduction</h1>
+            <p>HTML stands for Hyper Text Markup Language and is the standard markup language for creating Web pages</p>
+            <p>HTML describes the structure of a Web page and consists of a serie of elements</p>
+            <p>HTML elements tell the browser how to display the content, elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link", etc.</p>
+            <p>An html page is defined like this inside of an html file:</p>
+            <pre><code>
+                &lt;!DOCTYPE html>
+                &lt; lang="en">
+                &lt;head>
+                    &lt;meta charset="UTF-8">
+                    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge">
+                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+                &lt;title>Document&lt;/title>
+                &lt;/head>
+                &lt;body>
+                
+                    &lt;/body>
+                    &lt;/html>
+
+            </code></pre>
+        </div>
+        <div class="main-section" id="Tags">
+            <h1>What Does HTML Tags mean?</h1>
+            <p>An HTML tag is commonly defined as a set of characters constituting a formatted command for a Web page. At the core of HTML, tags provide the directions or recipes for the visual content that one sees on the Web.</p>
+            <p>HTML tags have always been important in the history of Web design. During the early days of the World Wide Web, they were responsible for a majority of Web code. That may not be the case anymore, but HTML tags are still at the center of how Web pages are formatted. Other kinds of languages have been built around the backbone of HTML, such as Cascading Style Sheets (CSS), which makes it easier to create consistent and overarching styles and color schemes.</p>
+            <p>HTML tags include tags for references, tags for tables, tags for headlines or titles, etc. An HTML tag consists of the tag name in angular brackets and may come in pair, which makes up the beginning and ending tag that frame a particular piece of code, text or other tags. The beginning tag consists of the name, optionally followed by one or more attributes, whereas the ending tag consists of the same name preceded by a forward slash ("/").</p>
+            <p>Some Examples of Tags</p>
+            <pre><code>
+                &lt;div>&lt;/div>&lt;h1>&lt;h1>&lt;button>&lt;/button>&lt;img src="" alt=""> &lt;form action="">&lt;/form>
+            </code></pre>
+            <p> A self-closing tag is an element of HTML code that has evolved in the language. Typically, the self-closing tag makes use of a “/” character in order to effectively close out a beginning tag enclosed in sideways carets.</p>
+        </div>
+        <div class="main-section" id="Forms">
+            <h1>Forms</h1>
+            <p>An HTML form is a section of a document containing normal content, markup, special elements called controls (checkboxes, radio buttons, menus, etc.), and labels on those controls. Users generally "complete" a form by modifying its controls (entering text, selecting menu items, etc.), before submitting the form to an agent for processing (e.g., to a Web server, to a mail server, etc.)</p>
+            <p>sers interact with forms through named controls.
+
+                A control's "control name" is given by its name attribute. The scope of the name attribute for a control within a FORM element is the FORM element.
+                
+                Each control has both an initial value and a current value, both of which are character strings.</p>
+            <p>A simple HTML form could be...</p>
+            <pre><code>
+                &ltform action="">
+                   &lt;label for="name">name&lt/label>
+                   &lt;input type="text">
+                   &lt;label for="age">age&lt/label>
+                   &lt;input type="number">
+                   &lt;label for="password">password&lt/label>
+                   &lt;input type="password">
+                &lt;/form>
+            </code></pre>
+            <p>When a form is submitted for processing, some controls have their name paired with their current value and these pairs are submitted with the form. Those controls for which name/value pairs are submitted are called successful controls.</p>
+        </div>
+        <div class="main-section" id="Buttons">
+            <h1>Buttons</h1>
+            <p>The button tag defines a clickable button, inside this element you can put text and tags, that is not possible with a button created with the input element</p>
+            <p>Buttons are nice, here's an example</p>
+            <pre><code>
+                &lt;button onclick="dothisfunction">Click me&lt;/button>
+            </code></pre>
+            <p>Always specify the type attribute for a button tag elemente, to tell browsers whats type of button it is, you can easily style buttons with CSS!</p>
+        </div>
+        <div class="main-section" id="Dom">
+            <h1>The DOM</h1>
+            <p>The dom is:</p>
+            <ul>
+                <li>The defining of a document</li>
+                <li>A way to manage data</li>
+                <li>A tree of html tags</li>
+                <li>The structure of html</li>
+                <li>The document object model (DOM)</li>
+            </ul>
+            <p>The DOM is a web API that is language-neutral. This means that you can implement and adopt it in any programming language. The DOM represents the structural pieces of a web document as objects that can be accessed and manipulated.</p>
+            <p>The dom tree is nested html tags</p>
+            <pre><code>
+                &lt;div>
+                    &lt;section>
+                        &lt;h1>&lt/h1>
+                        &lt;/section>
+                        &lt;section>&lt;/section>
+                    &lt;/div>
+                    &lt;div>&lt;/div>
+                &lt;div>
+                    &lt;div>
+                         &lt;button>&lt;/button>
+                         &lt;/div>
+                 &lt;/div>                 
+            </code></pre>
+            <p>The history of the DOM is relative to JavaScript and JScript as the first widely used scripting languages. These languages helped make web pages interactive.</p>
+        </div>
+    </div>
+ </body>
 </html>
